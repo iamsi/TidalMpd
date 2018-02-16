@@ -24,19 +24,19 @@ with open('/etc/mpd.conf') as f:
             folder=l[0]
         if 'tidal' in line.lower():
             intidal=1
-        if 'password' in line.lower():
+        if 'password' in line.lower() and intidal == 1:
             l = line.split('"')[1::2]
             password=l[0]
             next
-        if 'token' in line.lower():
+        if 'token' in line.lower() and intidal == 1:
             l = line.split('"')[1::2]
             token=l[0]
             next
-        if 'username' in line.lower():
+        if 'username' in line.lower() and intidal == 1:
             l = line.split('"')[1::2]
             username=l[0]
             next
-        if 'quality' in line.lower():
+        if 'quality' in line.lower() and intidal == 1:
             l = line.split('"')[1::2]
             quality=l[0]
             next
