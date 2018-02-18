@@ -49,7 +49,7 @@ if username == None or password == None or token == None:
 
 
 # check we can write to the folder
-if folder == "":
+if folder == None:
     folder = "."
 
 if not os.access(folder, os.W_OK):
